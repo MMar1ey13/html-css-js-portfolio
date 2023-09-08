@@ -61,7 +61,7 @@ a:hover {
 }
 
 .logo {
-  font-size: 1rem;
+  font-size: 3rem;
 }
 
 .logo:hover {
@@ -183,28 +183,6 @@ section {
   gap: 5rem;
   height: 80vh;
 }
-.section__video-container {
-  display: flex;
-  z-index: 0;
-  max-width: 50%;
-  /* Adjust the width as needed */
-  margin: 0 auto;
-  /* Center the video horizontally */
-  position: relative;
-  /* Enable relative positioning */
-  /* Adjust the left positioning as needed */
-}
-
-/* Style the video element itself */
-.section__video-container video {
-  width: 100%;
-  /* Make the video responsive within the container */
-  height: auto;
-  /* Maintain aspect ratio */
-  display: block;
-  /* Remove any default inline spacing */
-}
-
 .section__pic-container {
   display: flex;
   height: 400px;
@@ -346,7 +324,7 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: rgb(2, 131, 195);
+  background: rgb(255, 255, 255);
   border-radius: 2rem;
   border: rgb(133, 132, 132) 0.1rem solid;
   border-color: rgb(6, 6, 6);
@@ -411,7 +389,7 @@ article .icon {
 
 .color-container {
   border-color: rgb(0, 0, 0);
-  background: rgb(2, 131, 195);
+  background: rgb(255, 255, 255);
 }
 
 .project-img {
