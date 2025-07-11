@@ -4,29 +4,37 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
-// Function to add 'in-view' class when an element enters the viewport
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  if (!icon.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove("open");
+    icon.classList.remove("open");
+  }
+});
+
+// Intersection Observer for fade-in animation
 function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');
+      entry.target.classList.add("in-view");
     } else {
-      entry.target.classList.remove('in-view');
+      entry.target.classList.remove("in-view");
     }
   });
 }
 
-// Create an Intersection Observer
 const observer = new IntersectionObserver(handleIntersection, {
-  root: null, // Use the viewport as the root
-  rootMargin: '0px', // No margin
-  threshold: 0.3, // 30% of the element must be visible to trigger
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
 });
 
-// Select the sections you want to animate
-const sectionsToAnimate = document.querySelectorAll('section');
+const sectionsToAnimate = document.querySelectorAll("section");
 
-// Observe each section
 sectionsToAnimate.forEach((section) => {
+  section.classList.add("fade-in");
   observer.observe(section);
 });
-
