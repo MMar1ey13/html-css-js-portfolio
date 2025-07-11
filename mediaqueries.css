@@ -47,6 +47,30 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .experience-details-container {
+    padding: 1rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #contact,
   footer {
