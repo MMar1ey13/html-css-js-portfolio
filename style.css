@@ -247,6 +247,13 @@ section {
   position: relative;
 }
 
+.pdf-preview {
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .experience-sub-title {
   font-size: 1.75rem;
   font-weight: 600;
