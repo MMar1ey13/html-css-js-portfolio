@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: "Helvetica Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: rgb(255, 255, 255);
+  font-family:  Helvetica;
+  background-color: rgb(0, 65, 127);
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 
 p {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* TRANSITION */
@@ -25,7 +25,7 @@ p {
 a,
 .btn {
   transition: all 300ms ease;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* DESKTOP NAV */
@@ -48,27 +48,27 @@ nav {
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  text-decoration-color: rgb(249, 244, 244);
+  text-decoration-color: rgb(0, 255, 255);
 }
 
 a:hover {
   color: rgb(8, 8, 8);
-  text-decoration:underline;
+  text-decoration:;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(23, 23, 23);
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .logo:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER MENU 
 
 #hamburger-nav {
   display: none;
@@ -92,7 +92,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   transition: all 0.3 ease-in-out;
 }
 
@@ -245,7 +245,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(0, 0, 0) 0.1rem solid;
+  border: rgb(255, 255, 255) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -324,9 +324,9 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 208, 255);
   border-radius: 2rem;
-  border: rgb(133, 132, 132) 0.1rem solid;
+  border: rgb(255, 255, 255) 0.1rem solid;
   border-color: rgb(6, 6, 6);
   text-align: center;
 }
@@ -344,41 +344,163 @@ section {
 
 /* EXPERIENCE SECTION */
 
+/* ================================
+   EXPERIENCE SECTION STYLES
+=================================== */
+
 #experience {
   position: relative;
+  padding: 4rem 2rem;
+  background-color:rgb(0, 65, 127);;
+  text-align: center;
 }
 
+/* --- Section Title --- */
+#experience .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* --- Subtitles --- */
 .experience-sub-title {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
+/* --- Layout Containers --- */
 .experience-details-container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
+.details-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(238, 4, 4, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(193, 3, 3, 0.08);
+}
+
+/* --- Alternate Backgrounds --- */
+.details-container:nth-child(1) {
+  background: linear-gradient(135deg, #007bff, #ffffff);
+}
+
+.details-container:nth-child(2) {
+  background: linear-gradient(135deg, #0073ff, #ffffff);
+}
+
+.details-container:nth-child(3) {
+  background: linear-gradient(135deg,#0073ff, #ffffff);
+}
+
+/* --- Skill Items --- */
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: left;
 }
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  width: 200px;
 }
 
 article .icon {
+  width: 24px;
+  height: 24px;
   cursor: default;
+}
+
+article h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #333;
+}
+
+/* --- Button Styles --- */
+.btn-container {
+  margin-top: 2rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-color-2 {
+  background-color: #ffffff;
+  color: #fff;
+}
+
+.btn-color-2:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+/* --- Navigation Arrow --- */
+.icon.arrow {
+  width: 40px;
+  height: 40px;
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon.arrow:hover {
+  transform: translateY(5px);
+}
+
+/* --- Animation --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .details-container {
+    width: 95%;
+  }
+
+  .article-container {
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+
+  article {
+    width: 45%;
+  }
 }
 
 /* PROJECTS SECTION */
@@ -404,7 +526,7 @@ article .icon {
 }
 
 .project-btn {
-  color: black;
+  color: rgb(255, 85, 0);
   border-color: rgb(0, 0, 0);
 }
 
